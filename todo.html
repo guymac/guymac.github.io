@@ -1,0 +1,205 @@
+<html>
+<head>
+<title>TODO</title>
+<style type="text/css">
+    th, td { border: 1px solid; }
+    table { border-collapse: collapse; width: 100%; height: 100%; margin: 0; table-layout:fixed;}
+</style>
+<script>
+(function(){
+    const name = 'todo';
+
+    contentChanged = (evt) => 
+    {
+        let i = 0, j = 0;
+        let content = [];
+
+        // html table always has tbody
+        for (tbody of todo.children)
+        {
+            for (row of tbody.children)
+            {
+                content[i] = [];
+
+                for (cell of row.children)
+                {
+                    content[i][j] = cell.textContent;
+                    ++j;
+                }
+
+                ++i;
+                j = 0;
+            }
+
+            i = 0;
+        }
+
+        localStorage.setItem(name, JSON.stringify(content));
+    };
+
+    loadContent = (content) =>
+    {
+        if (!content) return;
+        let i = 0, j = 0;
+
+        // html table always has tbody
+        for (tbody of todo.children)
+        {
+            for (row of tbody.children)
+            {
+                for (cell of row.children)
+                {
+                    cell.textContent = content[i][j];
+                    ++j;
+                }
+
+                ++i;
+                j = 0;
+            }
+
+            i = 0;
+        }
+    };
+
+    window.onload = (evt) =>
+    {
+        loadContent(JSON.parse(localStorage.getItem(name)));
+        todo.addEventListener('input', contentChanged);
+    };
+
+})();
+</script>
+</head>
+<body>
+<table id="todo" contenteditable="true">
+    <tr><!-- -->
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr> 
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr> 
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr> 
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><!-- -->
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>                         
+</table>
+</body>
+</html>
