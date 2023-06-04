@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="15 15 385 240"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <desc>
+        USGS Mars Chart Quadrangles
+        with links to carport (test) search
+    </desc>
+
+    <defs>
+        <rect class="grid" id="box60x35" width="60" height="35" />
+        <rect class="grid" id="box45x30" width="45" height="30" />
+        <circle class="grid" id="circle50" r="25" />
+        <style>
+            .grid { pointer-events: all; }
+            g.grid { fill: none; stroke: silver; }
+            use:hover { fill: yellow; }
+            use.selected { fill: #dcdcdc; }
+            text { pointer-events: none; font-family: 'Trebuchet MS', Trebuchet, Verdana, Tahoma, Sans-Serif; font-weight: lighter; }
+            g.names text { font-size:6px; fill: blue; text-anchor: middle; font-variant: small-caps;
+            stroke: blue; stroke-width:0.25; }
+            g.mcids text { font-size:4px; fill: silver; text-anchor: middle; }
+            g.label text { font-size:3px; fill: silver; text-anchor: middle; }
+            g.left text { text-anchor: end; dominant-baseline: middle; }
+            g.right text { text-anchor: start; dominant-baseline: middle; }
+            text.block { stroke: white; stroke-width: 0.6em; }
+        </style>
+    </defs>
+
+    <!-- Poles -->
+    <g class="grid" transform="translate(20,45)">
+            <use id="MC01" x="90" xlink:href="#circle50"><title>Polar North</title></use>
+            <use id="MC30" x="270" xlink:href="#circle50"><title>Polar South</title></use>
+    </g>
+
+    <!-- Grid -->
+    <g class="grid" transform="translate(20,85)">
+        <g>
+                <use id="MC02" x="0" xlink:href="#box60x35"><title>Diacria</title></use>
+                <use id="MC03" x="60" xlink:href="#box60x35"><title>Arcadia</title></use>
+                <use id="MC04" x="120" xlink:href="#box60x35"><title>Acidalium</title></use>
+                <use id="MC05" x="180" xlink:href="#box60x35"><title>Ismenius</title></use>
+                <use id="MC06" x="240" xlink:href="#box60x35"><title>Casius</title></use>
+                <use id="MC07" x="300" xlink:href="#box60x35"><title>Cebrenia</title></use>
+        </g>
+
+        <g transform="translate(0,35)">
+                <use id="MC08" x="0" xlink:href="#box45x30"><title>Amazonis</title></use>
+                <use id="MC09" x="45" xlink:href="#box45x30"><title>Tharsis</title></use>
+                <use id="MC10" x="90" xlink:href="#box45x30"><title>Lunae</title></use>
+                <use id="MC11" x="135" xlink:href="#box45x30"><title>Oxia</title></use>
+                <use id="MC12" x="180" xlink:href="#box45x30"><title>Arabia</title></use>
+                <use id="MC13" x="225" xlink:href="#box45x30"><title>Syrtis</title></use>
+                <use id="MC14" x="270" xlink:href="#box45x30"><title>Amenthes</title></use>
+                <use id="MC15" x="315" xlink:href="#box45x30"><title>Elysium</title></use>
+        </g>
+
+        <g transform="translate(0,65)">
+                <use id="MC16" x="0" xlink:href="#box45x30"><title>Memnonia</title></use>
+                <use id="MC17" x="45" xlink:href="#box45x30"><title>Phoenicis</title></use>
+                <use id="MC18" x="90" xlink:href="#box45x30"><title>Coprates</title></use>
+                <use id="MC19" x="135" xlink:href="#box45x30"><title>Margaritifer</title></use>
+                <use id="MC20" x="180" xlink:href="#box45x30"><title>Sabaeus</title></use>
+                <use id="MC21" x="225" xlink:href="#box45x30"><title>Iapygia</title></use>
+                <use id="MC22" x="270" xlink:href="#box45x30"><title>Tyrrenum</title></use>
+                <use id="MC23" x="315" xlink:href="#box45x30"><title>Aeolis</title></use>
+        </g>
+
+        <g transform="translate(0,95)">
+                <use id="MC24" x="0" xlink:href="#box60x35"><title>Phaethontis</title></use>
+                <use id="MC25" x="60" xlink:href="#box60x35"><title>Thaumasia</title></use>
+                <use id="MC26" x="120" xlink:href="#box60x35"><title>Argyre</title></use>
+                <use id="MC27" x="180" xlink:href="#box60x35"><title>Noachis</title></use>
+                <use id="MC28" x="240" xlink:href="#box60x35"><title>Hellas</title></use>
+                <use id="MC29" x="300" xlink:href="#box60x35"><title>Eridania</title></use>
+        </g>
+    </g>
+
+    <!-- Names -->
+    <g class="names">
+        <g transform="translate(20,60)">
+            <text x="90">Boreum</text>
+            <text x="270">Australe</text>
+        </g>
+        <g transform="translate(20,117)">
+            <g>
+                <text x="30">Diacria</text>
+                <text x="90">Arcadia</text>
+                <text x="150">Acidalium</text>
+                <text x="210">Ismenius</text>
+                <text x="270">Casius</text>
+                <text x="330">Cebrenia</text>
+            </g>
+            <g transform="translate(0,30)">
+                <text x="22">Amazonis</text>
+                <text x="67">Tharsis</text>
+                <text x="112">Lunae</text>
+                <text x="157">Oxia</text>
+                <text x="202">Arabia</text>
+                <text x="247">Syrtis</text>
+                <text x="292">Amenthes</text>
+                <text x="337">Elysium</text>
+            </g>
+            <g transform="translate(0,60)">
+                <text x="22">Memnonia</text>
+                <text x="67">Phoenicis</text>
+                <text x="112">Coprates</text>
+                <text x="157">Margaritifer</text>
+                <text x="202">Sabaeus</text>
+                <text x="247">Iapygia</text>
+                <text x="292">Tyrrenum</text>
+                <text x="337">Aeolis</text>
+            </g>
+            <g transform="translate(0,95)">
+                <text x="30">Phaethontis</text>
+                <text x="90">Thaumasia</text>
+                <text x="150">Argyre</text>
+                <text x="210">Noachis</text>
+                <text x="270">Hellas</text>
+                <text x="330">Eridania</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- IDs -->
+    <g class="mcids">
+        <g transform="translate(20,45)">
+            <text x="90">MC-1</text>
+            <text x="270">MC-30</text>
+        </g>
+        <g transform="translate(20,85)">
+            <g transform="translate(0,20)">
+                <text x="30">MC-2</text>
+                <text x="90">MC-3</text>
+                <text x="150">MC-4</text>
+                <text x="210">MC-5</text>
+                <text x="270">MC-6</text>
+                <text x="330">MC-7</text>
+            </g>
+            <g transform="translate(0,50)">
+                <text x="22">MC-8</text>
+                <text x="67">MC-9</text>
+                <text x="112">MC-10</text>
+                <text x="157">MC-11</text>
+                <text x="202">MC-12</text>
+                <text x="247">MC-13</text>
+                <text x="292">MC-14</text>
+                <text x="337">MC-15</text>
+            </g>
+            <g transform="translate(0,80)">
+                <text x="22">MC-16</text>
+                <text x="67">MC-17</text>
+                <text x="112">MC-18</text>
+                <text x="157">MC-19</text>
+                <text x="202">MC-20</text>
+                <text x="247">MC-21</text>
+                <text x="292">MC-22</text>
+                <text x="337">MC-23</text>
+            </g>
+
+            <g transform="translate(0,115)">
+                <text x="30">MC-24</text>
+                <text x="90">MC-25</text>
+                <text x="150">MC-26</text>
+                <text x="210">MC-27</text>
+                <text x="270">MC-28</text>
+                <text x="330">MC-29</text>
+            </g>
+        </g>
+    </g>
+
+
+    <g class="label" transform="translate(20,75)">
+        <text x="90">North Pole</text>
+        <text x="270">South Pole</text>
+    </g>
+
+    <!-- latitude labels -->
+    <g class="label" transform="translate(20,21)">
+        <text x="90" class="block">65⁰</text>
+        <text x="90">65⁰</text>
+        <text x="270" class="block">-65⁰</text>
+        <text x="270">-65⁰</text>
+    </g>
+
+    <g class="label" transform="translate(17,85)">
+        <g class="left">
+            <text>65⁰</text>
+            <text y="35">30⁰</text>
+            <text y="65">0⁰</text>
+            <text y="95">-30⁰</text>
+            <text y="130">-65⁰</text>
+        </g>
+        <g class="right" transform="translate(365,0)">
+            <text>65⁰</text>
+            <text y="35">30⁰</text>
+            <text y="65">0⁰</text>
+            <text y="95">-30⁰</text>
+            <text y="130">-65⁰</text>
+        </g>
+    </g>
+
+    <!-- longitude labels -->
+    <g class="label" transform="translate(20,83)">
+        <g id="longitudes">
+            <text>180⁰</text>
+            <text x="60">240⁰E (120⁰W)</text>
+            <text x="120">300⁰E (60⁰W)</text>
+            <text x="180">0⁰</text>
+            <text x="240">60⁰E (300⁰W)</text>
+            <text x="300">120⁰E (240⁰W)</text>
+            <text x="360">180⁰</text>
+        </g>
+    </g>
+    <g class="label" transform="translate(20,220)">
+        <use xlink:href="#longitudes" />
+    </g>
+
+</svg>
